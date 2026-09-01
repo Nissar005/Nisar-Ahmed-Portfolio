@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-void: #0a0d0d;
+  --color-surface: #111616;
+  --color-panel: #141a1a;
+  --color-panel-2: #1a2221;
+  --color-line: #293332;
+  --color-line-soft: #1b2423;
+
+  --color-ink: #edf2ef;
+  --color-ink-dim: #a5b1ad;
+  --color-ink-faint: #65736e;
+
+  --color-mint: #56d6b1;
+  --color-mint-dim: #328e77;
+  --color-amber: #f0b35b;
+  --color-blue: #7eaddc;
+  --color-red: #ef7468;
+  --color-green: #67cf8a;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+  html {
+    scroll-behavior: smooth;
+    background: var(--color-void);
+  }
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-void);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { text-decoration: none; }
+  button { cursor: pointer; }
+  ::selection {
+    background: var(--color-mint);
+    color: var(--color-void);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-mint);
+    outline-offset: 2px;
+  }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--color-void); }
+  ::-webkit-scrollbar-thumb { background: var(--color-line); border-radius: 999px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-mint-dim); }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .font-mono { font-family: var(--font-mono); }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.028) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.028) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 24px rgba(79, 214, 196, 0.35);
+  }
+
+  .panel {
+    background: color-mix(in srgb, var(--color-panel) 94%, transparent);
+    border: 1px solid var(--color-line);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12);
+  }
+
+  .panel:hover { border-color: #3b4c48; }
+
+  .section-kicker::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 1px;
+    background: var(--color-mint);
+  }
+
+  .dashed-rule {
+    background-image: repeating-linear-gradient(to right, var(--color-line) 0, var(--color-line) 6px, transparent 6px, transparent 14px);
+    height: 1px;
+  }
+}
