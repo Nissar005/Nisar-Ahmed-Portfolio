@@ -8,9 +8,9 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2 font-mono font-bold text-ink">
             <TerminalSquare size={16} className="text-mint" />
-            Nisar Ahmed Siddiqui Niazi
+            Nisar Ahmed Siddiqui
           </div>
-          <p className="mt-1.5 text-sm text-ink-dim">DevOps Engineer</p>
+          <p className="mt-1.5 text-sm text-ink-dim">Nisar Ahmed · DevOps Engineer</p>
           <p className="mt-1 font-mono text-xs text-ink-faint">
             AWS | Kubernetes | Terraform | Docker | CI/CD | DevSecOps
           </p>
@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-5 sm:px-8 mt-8 pt-6 border-t border-line-soft">
-        <p className="text-xs text-ink-faint">Copyright 2026 Nisar Ahmed Siddiqui Niazi. All rights reserved.</p>
+        <p className="text-xs text-ink-faint">Copyright 2026 Nisar Ahmed Siddiqui. All rights reserved.</p>
       </div>
     </footer>
   );
