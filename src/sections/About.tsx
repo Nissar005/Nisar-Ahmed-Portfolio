@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { Cloud, Container, GitBranch, Layers } from "lucide-react";
+import { Cloud, Container, GitBranch } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 
 const stats = [
-  { icon: Layers, value: "5+ Years", label: "DevOps Experience" },
   { icon: Cloud, value: "AWS", label: "Cloud Platform" },
   { icon: Container, value: "Kubernetes", label: "Container Orchestration" },
   { icon: GitBranch, value: "CI/CD", label: "Automation" },
@@ -17,9 +16,8 @@ export default function About() {
           <SectionHeading eyebrow="whoami" title="About Me" />
           <div className="mt-7 space-y-4 text-ink-dim leading-relaxed">
             <p>
-              I am a DevOps Engineer with 5 years of experience working with cloud infrastructure,
-              automation, containerization, CI/CD, Kubernetes, Infrastructure as Code, and
-              DevSecOps practices.
+              I am a DevOps Engineer specializing in cloud infrastructure, automation,
+              containerization, CI/CD, Kubernetes, Infrastructure as Code, and DevSecOps practices.
             </p>
             <p>
               I specialize in designing and automating reliable infrastructure and software
