@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.nisarahmedsiddiqui.in/sitemap.xml
+Sitemap: https://nisarahmedsiddiqui.in/sitemap.xml
