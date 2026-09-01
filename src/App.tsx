@@ -12,7 +12,6 @@ import Cheatsheet from "./sections/Cheatsheet";
 import DevSecOps from "./sections/DevSecOps";
 import Monitoring from "./sections/Monitoring";
 import Philosophy from "./sections/Philosophy";
-import Resume from "./sections/Resume";
 import GitHubProjects from "./sections/GitHubProjects";
 import Contact from "./sections/Contact";
 
@@ -33,7 +32,6 @@ export default function App() {
         <DevSecOps />
         <Monitoring />
         <Philosophy />
-        <Resume />
         <GitHubProjects />
         <Contact />
       </main>
