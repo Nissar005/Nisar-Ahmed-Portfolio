@@ -16,17 +16,16 @@ export default function About() {
           <SectionHeading eyebrow="whoami" title="About Me" />
           <div className="mt-7 space-y-4 text-ink-dim leading-relaxed">
             <p>
-              I am a DevOps Engineer specializing in cloud infrastructure, automation,
-              containerization, CI/CD, Kubernetes, Infrastructure as Code, and DevSecOps practices.
+              I am a DevOps Engineer focused on cloud infrastructure, containerization, 
+              CI/CD automation, Kubernetes orchestration, Infrastructure as Code, and security practices.
             </p>
             <p>
-              I specialize in designing and automating reliable infrastructure and software
-              delivery workflows using AWS, Terraform, Docker, Kubernetes, Jenkins, GitHub
-              Actions, Linux, and modern DevOps tooling.
+              I design and automate reliable infrastructure and software delivery workflows using 
+              AWS, Terraform, Docker, Kubernetes, GitHub Actions, and modern DevOps tooling.
             </p>
             <p>
-              My approach focuses on automation, reliability, scalability, security,
-              observability, and continuous improvement.
+              My approach prioritizes automation, reliability, scalability, security, and 
+              continuous improvement.
             </p>
           </div>
         </div>
