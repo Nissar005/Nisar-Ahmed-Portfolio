@@ -13,19 +13,19 @@ export default function About() {
     <section id="about" className="py-24 sm:py-32 border-t border-line-soft">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-16 items-start">
         <div>
-          <SectionHeading eyebrow="whoami" title="About Me" />
+          <SectionHeading eyebrow="whoami" title="About Nisar Ahmed Siddiqui" />
           <div className="mt-7 space-y-4 text-ink-dim leading-relaxed">
             <p>
-              I am a DevOps Engineer focused on cloud infrastructure, containerization, 
-              CI/CD automation, Kubernetes orchestration, Infrastructure as Code, and security practices.
+              <strong className="text-ink">Nisar Ahmed Siddiqui</strong>, also known as <strong className="text-ink">Nisar Ahmed</strong>,
+              is a Computer Science Engineering graduate and DevOps Engineer focused on cloud infrastructure,
+              containerization, CI/CD automation, Kubernetes orchestration, Infrastructure as Code, and security practices.
             </p>
             <p>
-              I design and automate reliable infrastructure and software delivery workflows using 
-              AWS, Terraform, Docker, Kubernetes, GitHub Actions, and modern DevOps tooling.
+              I design and automate reliable infrastructure and software delivery workflows using AWS, Terraform,
+              Docker, Kubernetes, GitHub Actions, and modern DevOps tooling, with additional interests in QA automation and web development.
             </p>
             <p>
-              My approach prioritizes automation, reliability, scalability, security, and 
-              continuous improvement.
+              My approach prioritizes automation, reliability, scalability, security, and continuous improvement.
             </p>
           </div>
         </div>
