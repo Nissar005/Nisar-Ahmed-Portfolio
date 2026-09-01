@@ -27,9 +27,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.05 }}
             className="text-4xl sm:text-6xl font-bold tracking-tight text-ink leading-[1.03]"
           >
-            Nisar Ahmed
-            <br />
-            Siddiqui Niazi
+            Nisar Ahmed Siddiqui
           </motion.h1>
 
           <motion.p
@@ -38,7 +36,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.12 }}
             className="mt-5 font-mono text-base sm:text-lg text-mint text-glow"
           >
-            DevOps Engineer
+            Nisar Ahmed · DevOps Engineer
           </motion.p>
 
           <motion.p
@@ -47,8 +45,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.18 }}
             className="mt-5 text-ink-dim text-lg leading-relaxed max-w-xl"
           >
-            Building scalable cloud infrastructure, automated CI/CD pipelines, and reliable
-            containerized platforms.
+            I build scalable cloud infrastructure, automated CI/CD pipelines, and reliable
+            containerized platforms with a focus on AWS, DevOps, automation, QA, and web development.
           </motion.p>
 
           <motion.div
@@ -93,20 +91,10 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3"
           >
-            <a
-              href="https://github.com/Nissar005"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-ink-dim hover:text-ink transition-colors"
-            >
+            <a href="https://github.com/Nissar005" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm text-ink-dim hover:text-ink transition-colors">
               <GithubIcon size={17} /> GitHub
             </a>
-            <a
-              href="https://www.linkedin.com/in/nisar-ahmed-834950b5/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-ink-dim hover:text-ink transition-colors"
-            >
+            <a href="https://www.linkedin.com/in/nisar-ahmed-834950b5/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm text-ink-dim hover:text-ink transition-colors">
               <LinkedinIcon size={17} /> LinkedIn
             </a>
           </motion.div>
