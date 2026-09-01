@@ -10,6 +10,5 @@ export const navLinks: NavLink[] = [
   { label: "Architecture", href: "#architecture" },
   { label: "Projects", href: "#projects" },
   { label: "DevSecOps", href: "#devsecops" },
-  { label: "Resume", href: "#resume" },
   { label: "Contact", href: "#contact" },
 ];
