@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import type { ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
-import { GithubIcon } from "./icons";
 import type { Project } from "../data/projects";
 
 interface ProjectModalProps {
@@ -110,21 +109,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 Treating infrastructure and pipeline definitions as code made changes reviewable,
                 repeatable, and far easier to roll back when something didn't go to plan.
               </ModalBlock>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-line">
-              {project.github ? (
-                <a
-                  href={project.github}
-                  className="inline-flex items-center gap-2 rounded-md border border-line px-4 py-2.5 text-sm text-ink hover:border-mint-dim hover:text-mint transition-colors"
-                >
-                  <GithubIcon size={16} /> View Repository
-                </a>
-              ) : (
-                <span className="inline-flex items-center gap-2 rounded-md border border-line px-4 py-2.5 text-sm text-ink-faint">
-                  <GithubIcon size={16} /> [ADD YOUR GITHUB REPOSITORY]
-                </span>
-              )}
             </div>
           </motion.div>
         </motion.div>
