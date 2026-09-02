@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { GithubIcon } from "../components/icons";
 import SectionHeading from "../components/SectionHeading";
 import ProjectModal from "../components/ProjectModal";
 import { projects, type Project } from "../data/projects";
@@ -41,23 +40,11 @@ export default function Projects() {
                 )}
               </div>
 
-              <div className="mt-6 flex items-center gap-3 pt-4 border-t border-line-soft">
-                {p.github ? (
-                  <a
-                    href={p.github}
-                    className="inline-flex items-center gap-1.5 text-sm text-ink-dim hover:text-ink transition-colors"
-                  >
-                    <GithubIcon size={15} /> GitHub
-                  </a>
-                ) : (
-                  <span className="inline-flex items-center gap-1.5 text-sm text-ink-faint">
-                    <GithubIcon size={15} /> [ADD REPOSITORY]
-                  </span>
-                )}
+              <div className="mt-6 flex items-center justify-end pt-4 border-t border-line-soft">
                 <button
                   type="button"
                   onClick={() => setSelected(p)}
-                  className="ml-auto inline-flex items-center gap-1 text-sm text-mint hover:gap-1.5 transition-all cursor-pointer"
+                  className="inline-flex items-center gap-1 text-sm text-mint hover:gap-1.5 transition-all cursor-pointer"
                 >
                   View Details <ArrowUpRight size={15} />
                 </button>
