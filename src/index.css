@@ -1,56 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  --color-void: #0a0d0d;
-  --color-surface: #111616;
-  --color-panel: #141a1a;
-  --color-panel-2: #1a2221;
-  --color-line: #293332;
-  --color-line-soft: #1b2423;
+  /* Corporate-neutral palette: deep navy foundation, cool white surfaces, restrained blue accent. */
+  --color-void: #07111f;
+  --color-surface: #0b1728;
+  --color-panel: #102033;
+  --color-panel-2: #15283d;
+  --color-line: #24384d;
+  --color-line-soft: #182b40;
 
-  --color-ink: #edf2ef;
-  --color-ink-dim: #a5b1ad;
-  --color-ink-faint: #65736e;
+  --color-ink: #f4f7fb;
+  --color-ink-dim: #b7c4d2;
+  --color-ink-faint: #7e8fa2;
 
-  --color-mint: #56d6b1;
-  --color-mint-dim: #328e77;
-  --color-amber: #f0b35b;
-  --color-blue: #7eaddc;
-  --color-red: #ef7468;
-  --color-green: #67cf8a;
+  --color-mint: #4f9cf9;
+  --color-mint-dim: #3478c9;
+  --color-amber: #e7b15a;
+  --color-blue: #78b6f5;
+  --color-red: #ef7770;
+  --color-green: #67c587;
 }
 
 @layer base {
-  * {
-    border-color: var(--color-line);
-  }
+  * { border-color: var(--color-line); }
+
   html {
     scroll-behavior: smooth;
     background: var(--color-void);
   }
+
   body {
+    margin: 0;
     font-family: var(--font-sans);
-    background: var(--color-void);
+    background:
+      radial-gradient(circle at 80% -10%, rgba(79,156,249,0.09), transparent 34rem),
+      var(--color-void);
     color: var(--color-ink);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
+
   a { text-decoration: none; }
   button { cursor: pointer; }
+
   ::selection {
-    background: var(--color-mint);
-    color: var(--color-void);
+    background: rgba(79,156,249,0.28);
+    color: var(--color-ink);
   }
+
   :focus-visible {
     outline: 2px solid var(--color-mint);
-    outline-offset: 2px;
+    outline-offset: 3px;
   }
-  ::-webkit-scrollbar { width: 10px; height: 10px; }
+
+  ::-webkit-scrollbar { width: 9px; height: 9px; }
   ::-webkit-scrollbar-track { background: var(--color-void); }
-  ::-webkit-scrollbar-thumb { background: var(--color-line); border-radius: 999px; }
+  ::-webkit-scrollbar-thumb { background: #30465c; border-radius: 999px; }
   ::-webkit-scrollbar-thumb:hover { background: var(--color-mint-dim); }
 
   @media (prefers-reduced-motion: reduce) {
@@ -68,27 +77,26 @@
 
   .bg-grid {
     background-image:
-      linear-gradient(to right, rgba(255,255,255,0.028) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.028) 1px, transparent 1px);
-    background-size: 40px 40px;
+      linear-gradient(to right, rgba(160,190,220,0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(160,190,220,0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
   }
 
-  .text-glow {
-    text-shadow: 0 0 24px rgba(79, 214, 196, 0.35);
-  }
+  .text-glow { text-shadow: none; }
 
   .panel {
-    background: color-mix(in srgb, var(--color-panel) 94%, transparent);
+    background: rgba(16,32,51,0.72);
     border: 1px solid var(--color-line);
-    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+    backdrop-filter: blur(8px);
   }
 
-  .panel:hover { border-color: #3b4c48; }
+  .panel:hover { border-color: #38516b; }
 
   .section-kicker::before {
     content: "";
     display: block;
-    width: 20px;
+    width: 22px;
     height: 1px;
     background: var(--color-mint);
   }
