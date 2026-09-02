@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
-import { Mail, Send } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/icons";
 import SectionHeading from "../components/SectionHeading";
 
@@ -31,6 +31,9 @@ export default function Contact() {
             </a>
             <a href="mailto:nissar005@gmail.com" className="flex items-center gap-3 text-ink-dim hover:text-ink transition-colors">
               <Mail size={17} /> nissar005@gmail.com
+            </a>
+            <a href="tel:+917204572822" className="flex items-center gap-3 text-ink-dim hover:text-ink transition-colors">
+              <Phone size={17} /> +91 72045 72282
             </a>
           </div>
         </div>
