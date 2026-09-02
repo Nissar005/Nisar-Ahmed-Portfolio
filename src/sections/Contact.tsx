@@ -33,7 +33,7 @@ export default function Contact() {
               <Mail size={17} /> nissar005@gmail.com
             </a>
             <a href="tel:+917204572822" className="flex items-center gap-3 text-ink-dim hover:text-ink transition-colors">
-              <Phone size={17} /> +91 72045 72282
+              <Phone size={17} /> +91 72045 72822
             </a>
           </div>
         </div>
