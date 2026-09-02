@@ -5,11 +5,36 @@ import { GithubIcon, LinkedinIcon } from "../components/icons";
 import SectionHeading from "../components/SectionHeading";
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [error, setError] = useState("");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus("sending");
+    setError("");
+
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error || "Message could not be sent.");
+      }
+
+      form.reset();
+      setStatus("success");
+    } catch (err) {
+      setStatus("error");
+      setError(err instanceof Error ? err.message : "Message could not be sent.");
+    }
   }
 
   return (
@@ -39,16 +64,22 @@ export default function Contact() {
         </div>
 
         <div className="panel rounded-lg p-6 sm:p-8">
-          {submitted ? (
+          {status === "success" ? (
             <div className="h-full flex flex-col items-center justify-center text-center py-10">
               <div className="w-11 h-11 rounded-full bg-mint/10 border border-mint-dim flex items-center justify-center mb-4">
                 <Send size={17} className="text-mint" />
               </div>
-              <h3 className="font-semibold text-ink">Message ready to send</h3>
+              <h3 className="font-semibold text-ink">Message sent successfully</h3>
               <p className="mt-2 text-sm text-ink-dim max-w-xs">
-                This form is a UI demo. Wire it to an email service or backend to actually deliver
-                messages.
+                Thanks for reaching out. I’ll get back to you as soon as possible.
               </p>
+              <button
+                type="button"
+                onClick={() => setStatus("idle")}
+                className="mt-5 text-sm text-mint hover:underline"
+              >
+                Send another message
+              </button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -68,11 +99,25 @@ export default function Contact() {
                   placeholder="Tell me about the project..."
                 />
               </div>
+
+              <div className="absolute -left-[9999px]" aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+              </div>
+
+              {status === "error" && (
+                <p role="alert" className="text-sm text-red-400">
+                  {error}
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-md bg-mint text-void font-semibold px-5 py-3 hover:bg-mint/90 transition-colors"
+                disabled={status === "sending"}
+                className="w-full inline-flex items-center justify-center gap-2 rounded-md bg-mint text-void font-semibold px-5 py-3 hover:bg-mint/90 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Message <Send size={15} />
+                {status === "sending" ? "Sending..." : "Send Message"}
+                <Send size={15} />
               </button>
             </form>
           )}
