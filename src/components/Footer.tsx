@@ -6,14 +6,12 @@ export default function Footer() {
     <footer className="border-t border-line-soft py-12">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
         <div>
-          <div className="flex items-center gap-2 font-mono font-bold text-ink">
+          <a href="/" className="flex items-center gap-2 font-mono font-bold text-ink">
             <TerminalSquare size={16} className="text-mint" />
             Nisar Ahmed Siddiqui
-          </div>
-          <p className="mt-1.5 text-sm text-ink-dim">Nisar Ahmed · DevOps Engineer</p>
-          <p className="mt-1 font-mono text-xs text-ink-faint">
-            AWS | Kubernetes | Terraform | Docker | CI/CD | DevSecOps
-          </p>
+          </a>
+          <p className="mt-2 text-sm text-ink-dim">Engineer · Builder · Learner</p>
+          <p className="mt-1 font-mono text-xs text-ink-faint">DevOps & Cloud · Automation · QA · Web Development</p>
         </div>
 
         <div className="flex items-center gap-5">
