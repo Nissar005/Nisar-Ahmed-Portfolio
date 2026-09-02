@@ -41,23 +41,17 @@ function JourneyPage({ path }: { path: string }) {
     "/devops": {
       eyebrow: "01 · devops & cloud",
       title: "DevOps & Cloud",
-      intro: "My journey into DevOps is driven by understanding how applications move from development to reliable, automated delivery. I explore cloud infrastructure, Linux, CI/CD, containers, Kubernetes, Infrastructure as Code, and DevSecOps practices.",
-      topics: ["AWS", "Linux & Shell Scripting", "CI/CD with Jenkins & GitHub Actions", "Docker & Containers", "Kubernetes", "Terraform & Infrastructure as Code", "DevSecOps", "Monitoring & Reliability"],
-    },
-    "/automation": {
-      eyebrow: "02 · automation",
-      title: "Automation",
-      intro: "I enjoy finding repetitive processes and understanding how they can become dependable, repeatable workflows. Automation connects many of the areas I explore, from scripting and CI/CD to infrastructure and testing.",
-      topics: ["Shell Scripting", "CI/CD Automation", "GitHub Actions", "Jenkins", "Infrastructure Automation", "Terraform", "Container Workflows", "Deployment Automation"],
+      intro: "My journey into DevOps is driven by understanding how applications move from development to reliable, automated delivery. I explore cloud infrastructure, Linux, CI/CD, containers, Kubernetes, Infrastructure as Code, automation, and DevSecOps practices.",
+      topics: ["AWS", "Linux & Shell Scripting", "CI/CD with Jenkins & GitHub Actions", "Docker & Containers", "Kubernetes", "Terraform & Infrastructure as Code", "Infrastructure & Deployment Automation", "DevSecOps", "Monitoring & Reliability"],
     },
     "/qa": {
-      eyebrow: "03 · quality engineering",
+      eyebrow: "02 · quality engineering",
       title: "QA & Testing",
       intro: "Software quality is part of the delivery process, not an afterthought. I am interested in testing practices and automation that help teams release software with greater confidence and reliability.",
-      topics: ["Manual Testing", "Test Automation", "Regression Testing", "API Testing", "Quality Gates", "CI/CD Testing", "Defect Analysis", "DevOps + QA"],
+      topics: ["Manual Testing", "Test Automation", "Regression Testing", "API Testing", "Quality Gates", "CI/CD Testing", "Defect Analysis", "Test Workflow Automation", "DevOps + QA"],
     },
     "/web-development": {
-      eyebrow: "04 · web development",
+      eyebrow: "03 · web development",
       title: "Web Development",
       intro: "Web development gives me a way to turn ideas into useful experiences. I explore modern frontend development, responsive interfaces, application structure, and the engineering practices behind dependable web applications.",
       topics: ["React", "TypeScript", "Responsive UI", "Frontend Engineering", "Web Applications", "APIs & Integration", "Performance", "Deployment"],
