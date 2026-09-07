@@ -11,18 +11,18 @@ const highlights = [
 export default function About() {
   return (
     <section id="about" className="py-24 sm:py-32 border-t border-line-soft">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-16 items-start">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-[1.05fr_0.95fr] gap-16 items-start">
         <div>
           <SectionHeading eyebrow="whoami" title="About Nisar Ahmed Siddiqui" />
-          <div className="mt-7 space-y-4 text-ink-dim leading-relaxed">
+          <div className="mt-7 space-y-4 text-ink-dim leading-relaxed max-w-2xl">
             <p>
-              <strong className="text-ink">Nisar Ahmed Siddiqui</strong> is a Computer Science Engineering graduate with a broad interest in technology, building practical solutions, and understanding how modern software systems work.
+              <strong className="text-ink">Nisar Ahmed Siddiqui</strong> is a Computer Science Engineering graduate focused on building practical technology solutions and understanding how modern software systems are designed, tested, deployed, and maintained.
             </p>
             <p>
-              His main areas of exploration include <strong className="text-ink">DevOps &amp; Cloud, Automation, QA &amp; Testing, and Web Development</strong>. He enjoys connecting these areas through reliable workflows, automation, testing, and continuous learning.
+              His primary focus is <strong className="text-ink">DevOps &amp; Cloud</strong>, with supporting interests in automation, QA &amp; testing, and web development. He enjoys connecting these areas through reliable workflows, infrastructure, testing, and continuous learning.
             </p>
             <p>
-              This website is a living record of that journey — the technologies being explored, projects being built, and lessons being learned along the way.
+              This portfolio is a living record of that journey — from technical exploration and hands-on experiments to the production-style projects being built over time.
             </p>
           </div>
         </div>
