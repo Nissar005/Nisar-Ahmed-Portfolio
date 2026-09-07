@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/icons";
 
+const profilePhoto = "/nisar-ahmed-profile-2026.jpg?v=2";
+
 export default function Hero() {
   return (
     <section id="home" className="relative pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden">
@@ -34,9 +36,7 @@ export default function Hero() {
             <a href="#explore" className="group inline-flex items-center gap-3 bg-mint text-void font-semibold px-5 py-3 hover:bg-mint/90 transition-colors">
               Explore My Work <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#contact" className="inline-flex items-center gap-2 border border-line px-5 py-3 text-ink hover:border-ink-faint transition-colors">
-              Let's Connect
-            </a>
+            <a href="#contact" className="inline-flex items-center gap-2 border border-line px-5 py-3 text-ink hover:border-ink-faint transition-colors">Let's Connect</a>
           </motion.div>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.35 }} className="mt-8 flex items-center gap-5">
@@ -66,7 +66,7 @@ function IdentityPanel() {
       <div className="border border-line bg-surface p-5 sm:p-7">
         <div className="flex items-start gap-5 pb-6 border-b border-line-soft">
           <div className="w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-full overflow-hidden border border-line">
-            <img src="/nisar-ahmed-profile.jpg" alt="Nisar Ahmed Siddiqui" width={96} height={96} className="w-full h-full object-cover" />
+            <img src={profilePhoto} alt="Nisar Ahmed Siddiqui" width={96} height={96} className="w-full h-full object-cover" />
           </div>
           <div className="pt-1">
             <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink-faint">Nisar Ahmed Siddiqui</p>
@@ -78,10 +78,7 @@ function IdentityPanel() {
           {areas.map(([number, title, description]) => (
             <div key={number} className="group flex gap-4 py-4 border-b border-line-soft last:border-b-0">
               <span className="font-mono text-[11px] text-ink-faint pt-0.5 group-hover:text-mint transition-colors">{number}</span>
-              <div className="min-w-0">
-                <div className="text-sm font-medium text-ink">{title}</div>
-                <div className="mt-1 text-xs text-ink-faint">{description}</div>
-              </div>
+              <div className="min-w-0"><div className="text-sm font-medium text-ink">{title}</div><div className="mt-1 text-xs text-ink-faint">{description}</div></div>
             </div>
           ))}
         </div>
