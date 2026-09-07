@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "../data/nav";
 
-const profilePhoto = "/nisar-ahmed-profile-2026.jpg?v=2";
+const profilePhoto = "/nisar-ahmed-profile-2026.jpg?v=3";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
