@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, TerminalSquare } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { navLinks } from "../data/nav";
 
 export default function Navbar() {
@@ -23,7 +23,13 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 font-mono font-bold text-ink tracking-[0.08em]">
-          <TerminalSquare size={18} className="text-mint" strokeWidth={2} />
+          <img
+            src="/nisar-ahmed-profile.jpg"
+            alt="Nisar Ahmed Siddiqui"
+            width={28}
+            height={28}
+            className="w-7 h-7 rounded-full object-cover border border-mint/40"
+          />
           NISAR<span className="text-mint">.</span>
         </a>
 
