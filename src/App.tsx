@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Seo from "./components/Seo";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
+import Skills from "./sections/Skills";
 import Explore from "./sections/Explore";
 import Contact from "./sections/Contact";
 
@@ -48,6 +49,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <Skills />
         <Explore />
         <Contact />
       </main>
