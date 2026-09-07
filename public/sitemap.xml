@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://nisarahmedsiddiqui.in/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://nisarahmedsiddiqui.in/</loc>
+    <image:image>
+      <image:loc>https://nisarahmedsiddiqui.in/nisar-ahmed-profile.jpg</image:loc>
+      <image:title>Nisar Ahmed Siddiqui</image:title>
+      <image:caption>Nisar Ahmed Siddiqui, DevOps Engineer from Ballari, Karnataka</image:caption>
+    </image:image>
+  </url>
   <url><loc>https://nisarahmedsiddiqui.in/devops</loc></url>
   <url><loc>https://nisarahmedsiddiqui.in/qa</loc></url>
   <url><loc>https://nisarahmedsiddiqui.in/web-development</loc></url>
