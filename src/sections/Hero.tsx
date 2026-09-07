@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/icons";
 
-const profilePhoto = "/nisar-ahmed-profile-2026.jpg?v=2";
+const profilePhoto = "/nisar-ahmed-profile-2026.jpg?v=3";
 
 export default function Hero() {
   return (
