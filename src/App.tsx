@@ -4,7 +4,6 @@ import Seo from "./components/Seo";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Explore from "./sections/Explore";
-import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 
 const SEO: Record<string, { title: string; description: string }> = {
@@ -50,7 +49,6 @@ export default function App() {
         <Hero />
         <About />
         <Explore />
-        <Projects />
         <Contact />
       </main>
       <Footer />
