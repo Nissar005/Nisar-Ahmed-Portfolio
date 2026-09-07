@@ -21,25 +21,23 @@ export default function Hero() {
             Nisar Ahmed<br className="hidden sm:block" /> Siddiqui
           </motion.h1>
 
-          <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.12 }} className="mt-6 text-lg sm:text-xl text-ink-dim leading-relaxed max-w-xl">
-            DevOps Engineer focused on building reliable cloud infrastructure, automated delivery pipelines, and practical software systems.
-          </motion.p>
-
-          <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.18 }} className="mt-7 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs text-ink-faint">
-            <span className="text-mint">01</span> DevOps & Cloud
-            <span className="text-mint">02</span> Automation
-            <span className="text-mint">03</span> QA & Testing
-            <span className="text-mint">04</span> Web Development
+          <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mt-5">
+            <h2 className="text-xl sm:text-2xl font-semibold text-mint">DevOps Engineer</h2>
+            <p className="mt-2 font-mono text-xs sm:text-sm text-ink-faint">AWS · CI/CD · Docker · Kubernetes · Terraform</p>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.25 }} className="mt-9 flex flex-wrap items-center gap-3">
-            <a href="#explore" className="group inline-flex items-center gap-3 bg-mint text-void font-semibold px-5 py-3 hover:bg-mint/90 transition-colors">
-              Explore My Work <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }} className="mt-6 text-lg sm:text-xl text-ink-dim leading-relaxed max-w-xl">
+            Building reliable cloud infrastructure, automated delivery pipelines, and quality-focused software systems.
+          </motion.p>
+
+          <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="mt-9 flex flex-wrap items-center gap-3">
+            <a href="#skills" className="group inline-flex items-center gap-3 bg-mint text-void font-semibold px-5 py-3 hover:bg-mint/90 transition-colors">
+              View My Skills <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 border border-line px-5 py-3 text-ink hover:border-ink-faint transition-colors">Let's Connect</a>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.35 }} className="mt-8 flex items-center gap-5">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.3 }} className="mt-8 flex items-center gap-5">
             <a href="https://github.com/Nissar005" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm text-ink-faint hover:text-ink transition-colors"><GithubIcon size={17} /> GitHub</a>
             <span className="w-px h-4 bg-line" />
             <a href="https://www.linkedin.com/in/nisar-ahmed-834950b5/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm text-ink-faint hover:text-ink transition-colors"><LinkedinIcon size={17} /> LinkedIn</a>
@@ -63,7 +61,7 @@ function IdentityPanel() {
   return (
     <motion.div initial={{ opacity: 0, x: 16 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.15 }} className="relative">
       <div className="absolute -top-3 left-5 font-mono text-[10px] tracking-[0.2em] text-ink-faint bg-void px-2">PROFILE</div>
-      <div className="border border-line bg-surface p-5 sm:p-7">
+      <div className="border border-line bg-surface p-5 sm:p-7 shadow-[0_24px_60px_rgba(0,0,0,0.18)]">
         <div className="flex items-start gap-5 pb-6 border-b border-line-soft">
           <div className="w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-full overflow-hidden border border-line">
             <img src={profilePhoto} alt="Nisar Ahmed Siddiqui" width={96} height={96} className="w-full h-full object-cover" />
