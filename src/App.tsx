@@ -1,17 +1,38 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Seo from "./components/Seo";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Explore from "./sections/Explore";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 
+const SEO: Record<string, { title: string; description: string }> = {
+  "/devops": {
+    title: "DevOps & Cloud | Nisar Ahmed Siddiqui",
+    description:
+      "Explore Nisar Ahmed Siddiqui's DevOps and cloud journey, including AWS, Linux, CI/CD, Docker, Kubernetes, Terraform, Infrastructure as Code, DevSecOps and monitoring.",
+  },
+  "/qa": {
+    title: "QA & Testing | Nisar Ahmed Siddiqui",
+    description:
+      "Explore Nisar Ahmed Siddiqui's QA and testing interests, including test automation, API testing, regression testing, quality gates and CI/CD testing.",
+  },
+  "/web-development": {
+    title: "Web Development | Nisar Ahmed Siddiqui",
+    description:
+      "Explore Nisar Ahmed Siddiqui's web development work and learning across React, TypeScript, responsive UI, APIs, application structure, performance and deployment.",
+  },
+};
+
 export default function App() {
   const path = window.location.pathname.replace(/\/$/, "") || "/";
+  const seo = SEO[path];
 
   if (path !== "/") {
     return (
       <div className="min-h-screen bg-void">
+        {seo && <Seo title={seo.title} description={seo.description} path={path} />}
         <Navbar />
         <main className="pt-20">
           <JourneyPage path={path} />
@@ -23,6 +44,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-void">
+      <Seo />
       <Navbar />
       <main>
         <Hero />
