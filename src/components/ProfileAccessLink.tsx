@@ -66,7 +66,7 @@ export default function ProfileAccessLink({ target, className, children, ariaLab
   const targetUrl = target === "github" ? "https://github.com/Nissar005" : "https://www.linkedin.com/in/nisar-ahmed-siddiqui/";
 
   return (
-    <div className="inline-flex flex-col items-start gap-2">
+    <div className="flex flex-col items-start gap-2">
       <button
         type="button"
         onClick={requestAccess}
