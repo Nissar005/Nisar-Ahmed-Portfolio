@@ -67,7 +67,13 @@ export default function ProfileAccessLink({ target, className, children, ariaLab
 
   return (
     <div className="inline-flex flex-col items-start gap-2">
-      <button type="button" onClick={requestAccess} aria-label={ariaLabel} className={className} disabled={state === "requesting" || state === "pending"}>
+      <button
+        type="button"
+        onClick={requestAccess}
+        aria-label={ariaLabel}
+        className={`appearance-none border-0 bg-transparent p-0 m-0 font-inherit leading-none text-left inline-flex items-center [&>svg]:shrink-0 [&>svg]:align-middle ${className ?? ""}`}
+        disabled={state === "requesting" || state === "pending"}
+      >
         {children}
       </button>
       {state === "requesting" && <span className="text-xs font-mono text-ink-faint">Sending access request...</span>}
