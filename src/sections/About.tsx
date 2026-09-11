@@ -4,7 +4,7 @@ import SectionHeading from "../components/SectionHeading";
 
 const highlights = [
   { icon: GraduationCap, value: "B.E.", label: "Computer Science Engineering" },
-  { icon: MapPin, value: "Ballari", label: "Karnataka, India" },
+  { icon: MapPin, value: "Bangalore", label: "Karnataka, India" },
   { icon: Sparkles, value: "Builder", label: "Learning through practical work" },
 ];
 
