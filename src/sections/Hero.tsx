@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/icons";
+import ProfileAccessLink from "../components/ProfileAccessLink";
 
 const profilePhoto = "/nisar-ahmed-profile-2026.jpg?v=3";
 
@@ -38,9 +39,13 @@ export default function Hero() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.3 }} className="mt-8 flex items-center gap-5">
-            <a href="https://github.com/Nissar005" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm text-ink-faint hover:text-ink transition-colors"><GithubIcon size={17} /> GitHub</a>
+            <ProfileAccessLink target="github" className="inline-flex items-center gap-2 text-sm text-ink-faint hover:text-ink transition-colors" ariaLabel="Request access to GitHub">
+              <GithubIcon size={17} /> GitHub
+            </ProfileAccessLink>
             <span className="w-px h-4 bg-line" />
-            <a href="https://www.linkedin.com/in/nisar-ahmed-834950b5/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm text-ink-faint hover:text-ink transition-colors"><LinkedinIcon size={17} /> LinkedIn</a>
+            <ProfileAccessLink target="linkedin" className="inline-flex items-center gap-2 text-sm text-ink-faint hover:text-ink transition-colors" ariaLabel="Request access to LinkedIn">
+              <LinkedinIcon size={17} /> LinkedIn
+            </ProfileAccessLink>
           </motion.div>
         </div>
 
