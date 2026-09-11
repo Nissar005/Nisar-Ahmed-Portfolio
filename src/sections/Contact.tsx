@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 import { Mail, Phone, Send } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/icons";
+import ProfileAccessLink from "../components/ProfileAccessLink";
 import SectionHeading from "../components/SectionHeading";
 
 export default function Contact() {
@@ -48,12 +49,12 @@ export default function Contact() {
           />
 
           <div className="mt-9 space-y-3">
-            <a href="https://github.com/Nissar005" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-ink-dim hover:text-ink transition-colors">
+            <ProfileAccessLink target="github" className="flex items-center gap-3 text-ink-dim hover:text-ink transition-colors">
               <GithubIcon size={17} /> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/nisar-ahmed-834950b5/" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-ink-dim hover:text-ink transition-colors">
+            </ProfileAccessLink>
+            <ProfileAccessLink target="linkedin" className="flex items-center gap-3 text-ink-dim hover:text-ink transition-colors">
               <LinkedinIcon size={17} /> LinkedIn
-            </a>
+            </ProfileAccessLink>
             <a href="mailto:nissar005@gmail.com" className="flex items-center gap-3 text-ink-dim hover:text-ink transition-colors">
               <Mail size={17} /> nissar005@gmail.com
             </a>
