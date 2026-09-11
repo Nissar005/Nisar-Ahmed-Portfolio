@@ -9,7 +9,7 @@ type SeoProps = {
 const SITE = "https://nisarahmedsiddiqui.in";
 const DEFAULT_TITLE = "Nisar Ahmed Siddiqui | Nisar Ahmed | DevOps Engineer";
 const DEFAULT_DESCRIPTION =
-  "Nisar Ahmed Siddiqui, also known as Nisar Ahmed, is a Computer Science Engineering graduate from Ballari, Karnataka, exploring DevOps, AWS, cloud infrastructure, CI/CD, Kubernetes, automation, QA and web development.";
+  "Nisar Ahmed Siddiqui, also known as Nisar Ahmed, is a Computer Science Engineering graduate from Bangalore, Karnataka, exploring DevOps, AWS, cloud infrastructure, CI/CD, Kubernetes, automation, QA and web development.";
 
 export default function Seo({ title = DEFAULT_TITLE, description = DEFAULT_DESCRIPTION, path = "/" }: SeoProps) {
   useEffect(() => {
