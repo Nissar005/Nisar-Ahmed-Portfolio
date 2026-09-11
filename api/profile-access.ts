@@ -3,6 +3,10 @@ import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 const ADMIN_EMAIL = "nissar005@gmail.com";
 const REQUEST_TTL_SECONDS = 15 * 60;
+const ALLOWED_ORIGINS = new Set([
+  "https://nisarahmedsiddiqui.in",
+  "https://www.nisarahmedsiddiqui.in",
+]);
 const ALLOWED = {
   github: "https://github.com/Nissar005",
   linkedin: "https://www.linkedin.com/in/nisar-ahmed-siddiqui/",
@@ -28,15 +32,9 @@ function json(res: VercelResponse, status: number, body: unknown) {
   return res.status(status).setHeader("Cache-Control", "no-store").json(body);
 }
 
-function redisConfig() {
-  return {
-    url: process.env.KV_REST_API_URL,
-    token: process.env.KV_REST_API_TOKEN,
-  };
-}
-
 async function redis(command: unknown[]) {
-  const { url, token: auth } = redisConfig();
+  const url = process.env.KV_REST_API_URL;
+  const auth = process.env.KV_REST_API_TOKEN;
   if (!url || !auth) throw new Error("Redis is not configured");
 
   const response = await fetch(url, {
@@ -107,7 +105,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== "POST") return json(res, 405, { error: "Method not allowed" });
 
   const origin = req.headers.origin;
-  if (origin && origin !== "https://nisarahmedsiddiqui.in") {
+  if (origin && !ALLOWED_ORIGINS.has(origin)) {
     return json(res, 403, { error: "Profile access requests are only accepted from the portfolio website." });
   }
 
@@ -122,8 +120,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const requestId = token();
     await setRequest(requestId, { target, status: "pending", createdAt: Date.now() });
 
-    const approveUrl = `${req.headers.host ? `https://${req.headers.host}` : "https://nisarahmedsiddiqui.in"}/api/profile-access?id=${requestId}&action=approve`;
-    const rejectUrl = `${req.headers.host ? `https://${req.headers.host}` : "https://nisarahmedsiddiqui.in"}/api/profile-access?id=${requestId}&action=reject`;
+    const requestOrigin = origin && ALLOWED_ORIGINS.has(origin) ? origin : "https://nisarahmedsiddiqui.in";
+    const approveUrl = `${requestOrigin}/api/profile-access?id=${requestId}&action=approve`;
+    const rejectUrl = `${requestOrigin}/api/profile-access?id=${requestId}&action=reject`;
     const profileName = target === "github" ? "GitHub" : "LinkedIn";
 
     const response = await fetch("https://api.resend.com/emails", {
