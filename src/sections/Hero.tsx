@@ -14,7 +14,7 @@ export default function Hero() {
             <span className="w-2 h-2 rounded-full bg-green" />
             <span>AVAILABLE FOR OPPORTUNITIES</span>
             <span className="hidden sm:inline text-line">/</span>
-            <span className="hidden sm:inline-flex items-center gap-1"><MapPin size={12} /> Ballari, India</span>
+            <span className="hidden sm:inline-flex items-center gap-1"><MapPin size={12} /> Bangalore, India</span>
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.05 }} className="text-[2.65rem] sm:text-6xl lg:text-[4.5rem] font-bold tracking-[-0.045em] text-ink leading-[0.98]">
