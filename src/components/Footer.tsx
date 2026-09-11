@@ -1,5 +1,6 @@
 import { Mail, TerminalSquare } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/icons";
+import ProfileAccessLink from "./ProfileAccessLink";
 
 export default function Footer() {
   return (
@@ -15,12 +16,12 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-5">
-          <a href="https://github.com/Nissar005" target="_blank" rel="noreferrer" aria-label="GitHub" className="text-ink-dim hover:text-ink transition-colors">
+          <ProfileAccessLink target="github" className="text-ink-dim hover:text-ink transition-colors" ariaLabel="Request access to GitHub">
             <GithubIcon size={18} />
-          </a>
-          <a href="https://www.linkedin.com/in/nisar-ahmed-834950b5/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-ink-dim hover:text-ink transition-colors">
+          </ProfileAccessLink>
+          <ProfileAccessLink target="linkedin" className="text-ink-dim hover:text-ink transition-colors" ariaLabel="Request access to LinkedIn">
             <LinkedinIcon size={18} />
-          </a>
+          </ProfileAccessLink>
           <a href="mailto:nissar005@gmail.com" aria-label="Email" className="text-ink-dim hover:text-ink transition-colors">
             <Mail size={18} />
           </a>
